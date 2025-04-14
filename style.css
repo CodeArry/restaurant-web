@@ -314,6 +314,7 @@ html {
 
 .section-about__stats {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     margin-top: 16px;
     margin-bottom: 32px;
@@ -358,14 +359,15 @@ html {
 
 /* SECTION: SERVICES */
 .section-services__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    justify-content: space-between;
     margin-top: 64px;
     gap: 32px;
 }
 
 .section-services__card {
     padding: 24px;
+    width: 100%;
     transition: 300ms ease;
     cursor: pointer;
 }
@@ -530,6 +532,7 @@ html {
     .section-home {
         flex-direction: column-reverse;
         justify-content: center;
+        padding-top: 130px;
     }
 
     .section-home__title {
@@ -539,7 +542,7 @@ html {
 
     .section-home__image {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
     }
 
     /* END SECTION: HOME */
@@ -549,7 +552,18 @@ html {
         flex-direction: column-reverse;
     }
 
+    .section-about__image-backkground-2 {
+        display: none;
+    }
+
     /* SECTION: END ABOUT */
+
+    /* SECTION: SERVICES */
+    .section-services__cards {
+        flex-direction: column;
+    }
+
+    /* END SECTION: SERVICES */
 
     /* SECTION: CONTACT */
     .section-contact {
